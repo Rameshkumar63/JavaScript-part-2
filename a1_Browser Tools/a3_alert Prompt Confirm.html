@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>alert prompt</title>
+</head>
+<body>
+    <h3>alert prompt </h3>
+
+    <script>
+        //alert used invoke mini window with msg
+        alert("helllo")
+
+        // promt take user input
+        let a = prompt("Enter a here =")
+        alert("You entered a of type "+ (typeof a))
+
+        // confirm return true for submit (OK) or cancel
+        let write = confirm("Do you want to write it to the page")
+        if(write){
+            document.write("Please allow me to write ")
+        }else{
+            document.write("please allow me to write")
+        }
+    </script>
+</body>
+</html>

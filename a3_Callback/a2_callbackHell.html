@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3> Call back hell</h3>
+    <p>Callback Hell
+        Manlo D task achieve karna hai hame jarurat hai line by line code execute kaare pahe A A ka result pake We execute B  Bka Result pake we execute C Then D 
+        Callback is not recommended use in Call back hell ki problem ko solve karne ke liyw promisee ka use karte hai.
+        The phenomenon which happens when we nest multiple callbacks within a function is called a callback hell. The shape of the resulting code structure resembles a pyramid and hence callback hell is also called the “pyramid of the doom”. It makes the code very difficult to understand and maintain. It is most frequently seen while working with Node.js. The code below shows an example of a callback hell.
+        To understand the internal working of callback hell in javascript, assume we have to achieve a task say D. To achieve task D, we need to execute a series of dependent tasks ranging from A to C asynchronously. In short, first we execute task A, we get the result and task B need to depend on result A to start its execution. Similarly, unless result B is produced we can't execute task C. This leads to the chaining of tasks from A to D, which creates a set of nested callbacks.
+        </p>
+
+    <script>
+        function getCheese(callback){
+            setTimeout(() =>{
+                const cheese ="🍕";
+                console.log("here a cheese ", cheese);
+                callback(cheese);
+            },2000);
+        }
+        getCheese((cheese) =>{
+            console.log("got tyhe cheese", cheese)
+        })
+    </script>
+</body>
+</html>
